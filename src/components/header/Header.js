@@ -12,10 +12,10 @@ const Header = () => {
     return(
         <>
             <header>
-                <h1>RUNO</h1>
+                <h1 className="header-title">RUNO</h1>
                 <nav>
                     <div className="header-links">
-                        <a href="#">Home</a>
+                        <a href="#" className="active-link">Home</a>
                         <a href="#">About</a>
                         <a href="#">Articles</a>
                         <a href="#">Contact Us</a>
@@ -32,6 +32,28 @@ const Header = () => {
                     <img src={search} alt="Search"/>
                 </nav>
             </header>
+            <section id="blog-slider">
+                <div className="blog-slider-wrapper">
+                    <p className="blog-slider-tag-label">
+                        ADVENTURE
+                    </p>
+                    <h1 className="blog-slider-title">Richird Norton photorealistic rendering as real photos</h1>
+                    <div className="blog-slider-description">
+                        <div className="blog-slider-description-date">
+                            <p>08.08.2021</p>
+                            <span className="blog-slider-horizontal-line"></span>
+                        </div>
+                        <p className="blog-slider-description-text">
+                            Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.
+                        </p>
+                    </div>
+                    <div className="dots">
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
