@@ -34,7 +34,7 @@ const Header = () => {
             </header>
             <section id="blog-slider">
                 <div className="blog-slider-wrapper">
-                    <p className="blog-slider-tag-label">
+                    <p className="tag-label">
                         ADVENTURE
                     </p>
                     <h1 className="blog-slider-title">Richird Norton photorealistic rendering as real photos</h1>

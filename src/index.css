@@ -1,6 +1,7 @@
 :root{
   --primary-text-color: #F8F9FA;
   --secondary-text-color: #E5E5E5;
+  --title-text-color:#495057;
   --primary-bg-color: #212529;
   --secondary-bg-color: #343A40;
   --focus-color: #D4A373;
@@ -18,4 +19,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.tag-label{
+  font-size: 10px;
+  color:white;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px 5px 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: inline-block;
 }

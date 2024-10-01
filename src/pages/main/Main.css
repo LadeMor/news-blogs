@@ -1,0 +1,83 @@
+h1, h2, p{
+    margin: 0;
+}
+
+#articles{
+    margin-top: 150px;
+}
+
+.articles-header{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.articles-header-title{
+    font-size: 36px;
+    font-family: "Lora", sans-serif;
+    color:var(--title-text-color);
+    font-weight: bold;
+}
+
+.articles-filter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.articles-filter-list{
+    display: flex;
+    gap: 20px;
+}
+
+.articles-filter-list button, .filter-btn{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 12px;
+    font-family: "Lora", sans-serif;
+    color:var(--title-text-color);
+    font-weight: bold;
+}
+
+.articles-list-image{
+    position: relative;
+    display: inline-block;
+}
+
+.articles-list-image img{
+    object-fit: cover;
+}
+
+.articles-list-image-label{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.article-list-card{
+    width: 310px;
+}
+
+.articles-list-text{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.articles-list-text-date{
+    font-size: 12px;
+    font-family: "Lora", sans-serif;
+    color: var(--title-text-color);
+}
+
+.articles-list-text-title{
+    font-size: 18px;
+    font-family: "Lora", sans-serif;
+    font-weight: bold;
+    color: var(--title-text-color);
+}
+
+.articles-list-text-description{
+    font-size: 12px;
+    font-family: "Lora", sans-serif;
+    color: var(--title-text-color);
+}
