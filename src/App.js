@@ -5,10 +5,8 @@ import Main from "./pages/main/Main";
 function App() {
   return (
     <>
-      <Container>
-        <Header/>
-        <Main/>
-      </Container>
+      <Header/>
+      <Main/>
     </>
   );
 }

@@ -10,7 +10,7 @@ header{
     padding: 30px 70px 30px 70px;
     max-width: 1440px;
     width: 100%;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
 }
 
@@ -81,6 +81,8 @@ nav{
     font-weight: bold;
     color:white;
     width: 530px;
+    margin-top: 15px;
+    margin-bottom: 13px;
 }
 
 .blog-slider-description{
@@ -113,4 +115,21 @@ nav{
     width: 30px;
     height: 1px;
     background-color:  var(--secondary-text-color);
+}
+
+.dots{
+    display: flex;
+    gap:10px;
+    margin-top: 62px;
+}
+
+.dot{
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.200);
+    border-radius: 100%;
+}
+
+.active-dot{
+    background-color: rgba(255, 255, 255, 1);
 }

@@ -4,12 +4,14 @@ h1, h2, p{
 
 #articles{
     margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .articles-header{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-bottom: 30px;
 }
 
 .articles-header-title{
@@ -36,6 +38,12 @@ h1, h2, p{
     font-family: "Lora", sans-serif;
     color:var(--title-text-color);
     font-weight: bold;
+}
+
+.articles-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .articles-list-image{

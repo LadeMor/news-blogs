@@ -1,8 +1,8 @@
 import "./Container.css";
 
-const Container = ({children}) => {
+const Container = ({children, width}) => {
     return (
-        <div className="container">
+        <div className="container" style={{maxWidth:`${width}px`}}>
             {children}
         </div>
     );
