@@ -43,6 +43,7 @@ h1, h2, p{
 .articles-list{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -156,11 +157,13 @@ h1, h2, p{
 /*/////////////////////////////////////////////////////////////////////////// */
 
 #blog-metro{
-
+    margin-bottom: 150px;
 }
 
 .blog-metro-card-list{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap:20px;
 }
 
