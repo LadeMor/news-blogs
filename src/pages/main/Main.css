@@ -150,3 +150,65 @@ h1, h2, p{
     color:var(--secondary-text-color);
 }
 
+
+/*/////////////////////////////////////////////////////////////////////////// */
+/*/////////////////////////////////////////////////////////////////////////// */
+/*/////////////////////////////////////////////////////////////////////////// */
+
+#blog-metro{
+
+}
+
+.blog-metro-card-list{
+    display: flex;
+    gap:20px;
+}
+
+.blog-metro-title{
+    color:var(--title-text-color);
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Lora", sans-serif;
+    margin-bottom: 70px;
+}
+
+.blog-metro-card{
+    position: relative;
+    display: inline-block;
+}
+
+.blog-metro-card-tag{
+    position: absolute;
+    top:10px;
+    right: 10px;
+}
+
+.blog-metro-card-content{
+    position: absolute;
+    bottom: 42px;
+    left: 40px;
+}
+
+.blog-metro-card-date{
+    font-size: 12px;
+    font-family: "Lora", sans-serif;
+    color:var(--secondary-text-color);
+    margin-bottom: 15px;
+}
+
+.blog-metro-card-title{
+    font-size: 18px;
+    font-family: "Lora", sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+    width: 270px;
+
+}
+
+.blog-metro-card-text{
+    font-size: 12px;
+    font-family: "Lora", sans-serif;
+    color:var(--secondary-text-color);
+    width: 340px;
+}

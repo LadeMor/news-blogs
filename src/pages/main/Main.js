@@ -1,11 +1,13 @@
 import "./Main.css";
+import Container from "../../components/container/Container";
 
 import blog1 from "../../assets/images/blog/blog-image1.png";
-import Container from "../../components/container/Container";
+import blog_image1 from "../../assets/images/blog-metro/Blog_Image.png";
 
 const Main = () => {
 
     const placeholders = Array(8).fill(null);
+    const blogMetroPlaceholder = Array(3).fill(null);
 
     return (
         <>
@@ -55,11 +57,43 @@ const Main = () => {
                                 Richird Norton photorealistic rendering as real photos
                             </h1>
                             <p className="big-post-text">
-                            Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.
+                            Progressively incentivize cooperative systems through technically sound functionalities. 
+                            The credibly productivate seamless data.
                             </p>
                             <div className="horizontal-line"></div>
                             <p className="big-post-date">08.08.2021</p>
                         </div>
+                </section>
+            </Container>
+            <Container width={1300}>
+                <section id="blog-metro">
+                    <h1 className="blog-metro-title">Editor’s Pick</h1>
+                    <div className="blog-metro-card-list">
+                        {/* <div className="blog-metro-card">
+                            <img src={blog_image1}/>
+                            <a className="tag-label blog-metro-card-tag">FASHON</a>
+                            <div className="blog-metro-card-content">
+                                <a className="blog-metro-card-date">08.08.2021</a>
+                                <h2 className="blog-metro-card-title">Richird Norton photorealistic rendering as real photos</h2>
+                                <p className="blog-metro-card-text">Progressively incentivize cooperative systems 
+                                    through technically sound functionalities. 
+                                    The credibly productivate seamless data.</p>
+                            </div>
+                        </div> */}
+                        {blogMetroPlaceholder.map((_, index) => (
+                            <div className="blog-metro-card" key={index}>
+                                <img src={blog_image1}/>
+                                <a className="tag-label blog-metro-card-tag">FASHON</a>
+                                <div className="blog-metro-card-content">
+                                    <a className="blog-metro-card-date">08.08.2021</a>
+                                    <h2 className="blog-metro-card-title">Richird Norton photorealistic rendering as real photos</h2>
+                                    <p className="blog-metro-card-text">Progressively incentivize cooperative systems 
+                                        through technically sound functionalities. 
+                                        The credibly productivate seamless data.</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </section>
             </Container>
         </>
