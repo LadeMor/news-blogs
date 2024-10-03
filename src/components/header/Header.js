@@ -8,6 +8,7 @@ import behance from "../../assets/icons/behance.png";
 
 import search from "../../assets/icons/Search Icon.png"
 import Container from "../container/Container";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
     return(
@@ -17,8 +18,8 @@ const Header = () => {
                     <h1 className="header-title">RUNO</h1>
                     <nav>
                         <div className="header-links">
-                            <a href="#" className="active-link">Home</a>
-                            <a href="#">About</a>
+                            <NavLink to="/" className={(navData) => navData.isActive ? "active-link" : ""}>Home</NavLink>
+                            <NavLink to="/about" className={(navData) => navData.isActive ? "active-link" : ""}>About</NavLink>
                             <a href="#">Articles</a>
                             <a href="#">Contact Us</a>
                         </div>

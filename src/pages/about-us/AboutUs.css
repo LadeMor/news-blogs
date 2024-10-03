@@ -1,0 +1,38 @@
+#about-us{
+    padding: 100px 0px 100px 0px;
+}
+
+.about-us-title{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Lora", sans-serif;
+    color:var(--title-text-color);
+    text-align: center;
+}
+
+hr{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-us-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:70px;
+}
+
+.about-us-content img{
+    width: 400px;
+    border-radius: 10px;
+}
+
+.about-us-description{
+    font-size: 14px;
+    font-family: "Lora", sans-serif;
+    line-height: 25px;
+    width: 860px;
+    color:var(--title-text-color);
+}
+
+
