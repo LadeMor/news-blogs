@@ -50,10 +50,16 @@ h1, h2, p{
 .articles-list-image{
     position: relative;
     display: inline-block;
+    overflow: hidden;
 }
 
 .articles-list-image img{
     object-fit: cover;
+    transition: .3s;
+}
+
+.article-list-card:hover .articles-list-image img{
+    transform: scale(1.2);
 }
 
 .articles-list-image-label{
@@ -64,7 +70,10 @@ h1, h2, p{
 
 .article-list-card{
     width: 310px;
+    cursor: pointer;
+    
 }
+
 
 .articles-list-text{
     display: flex;

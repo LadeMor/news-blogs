@@ -43,8 +43,8 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="sub-footer">
-                    <h3>2021 | RUNO Publisher Studio</h3>
-                    <p>Subscribe Now</p>
+                    <h3 className="sub-footer-title">2021 | RUNO Publisher Studio</h3>
+                    <p className="sub-footer-title">Subscribe Now</p>
                 </div>
             </footer>
         </Container>

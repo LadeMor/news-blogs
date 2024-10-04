@@ -47,7 +47,7 @@ footer{
     align-items: center;
 }
 
-.sub-footer h3, p{
+.sub-footer-title{
     margin: 0;
     color: var(--secondary-text-color);
     font-size: 14px;

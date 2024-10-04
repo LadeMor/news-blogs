@@ -20,8 +20,8 @@ const Header = () => {
                         <div className="header-links">
                             <NavLink to="/" className={(navData) => navData.isActive ? "active-link" : ""}>Home</NavLink>
                             <NavLink to="/about" className={(navData) => navData.isActive ? "active-link" : ""}>About</NavLink>
-                            <NavLink  to="/create" className={(navData) => navData.isActive ? "active-link" : ""}>Create</NavLink>
-                            <a href="#">Contact Us</a>
+                            <NavLink to="/create" className={(navData) => navData.isActive ? "active-link" : ""}>Create</NavLink>
+                            <a href="#">Articles</a>
                         </div>
                         <span className="vertical-line"></span>
                         <div className="header-links-icons">

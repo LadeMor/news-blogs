@@ -9,7 +9,7 @@ const AboutUs = () => {
         <>
             <Container width={1300}>
                 <section id="about-us">
-                    <h1 className="about-us-title">AboutUs</h1>
+                    <h1 className="about-us-title">About Us</h1>
                     <hr/>
                     <div className="about-us-content">
                         <p className="about-us-description">

@@ -3,6 +3,7 @@ import Container from "../../components/container/Container";
 
 import blog1 from "../../assets/images/blog/blog-image1.png";
 import blog_image1 from "../../assets/images/blog-metro/Blog_Image.png";
+import { NavLink } from "react-router-dom";
 
 const Main = () => {
 
@@ -31,22 +32,24 @@ const Main = () => {
                     </div>
                     <div className="articles-list">
                         {placeholders.map((item, index) => (
-                            <div className="article-list-card" >
-                            <div className="articles-list-image">
-                                <img src={blog1} />
-                                <div className="tag-label articles-list-image-label">
-                                    ADVENTURE
+                           <NavLink to="/article-item" style={{textDecoration:"none"}}>
+                                <div className="article-list-card" >
+                                    <div className="articles-list-image">
+                                        <img src={blog1} />
+                                        <div className="tag-label articles-list-image-label">
+                                            ADVENTURE
+                                        </div>
+                                    </div>
+                                    <div className="articles-list-text">
+                                        <p className="articles-list-text-date">08.08.2021</p>
+                                        <h2 className="articles-list-text-title">Dream destinations to visit this year in Paris</h2>
+                                        <p className="articles-list-text-description">Progressively incentivize cooperative systems through
+                                            technically sound functionalities. Credibly productivate
+                                            seamless data with flexible schemas.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="articles-list-text">
-                                <p className="articles-list-text-date">08.08.2021</p>
-                                <h2 className="articles-list-text-title">Dream destinations to visit this year in Paris</h2>
-                                <p className="articles-list-text-description">Progressively incentivize cooperative systems through
-                                    technically sound functionalities. Credibly productivate
-                                    seamless data with flexible schemas.
-                                </p>
-                            </div>
-                        </div>
+                           </NavLink>
                         ))}
                     </div>
                 </section>
