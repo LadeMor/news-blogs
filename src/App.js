@@ -7,8 +7,12 @@ import Main from "./pages/main/Main";
 import AboutUs from './pages/about-us/AboutUs';
 import CreateArticle from './pages/create-article/CreateArticle';
 import ArticleItem from './pages/article-item/ArticleItem';
+import { useState } from 'react';
 
 function App() {
+
+ 
+
   return (
     <Router>
       <Header/>
