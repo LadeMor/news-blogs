@@ -49,6 +49,8 @@ form{
 }
 
 
+
+
 .form-input-tag-list{
     display: flex;
     flex-wrap: wrap;
@@ -120,6 +122,10 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.error-input-image{
+    background-color: rgba(255, 0, 0, 0.1) ;
 }
 
 .form-input-image-preview img:not(.cover-image-preview){

@@ -3,16 +3,12 @@ import React, { useMemo, useEffect } from "react";
 import Container from "../../components/container/Container";
 
 import media_image from "../../assets/icons/media-image.svg";
+import alert from "../../assets/icons/alert-circle.svg";
 
 import "./CreateArticle.css"
 import { useState } from "react";
 
 const CreateArticle = () => {
-    // Title
-    // Date
-    // TextContent
-    // Author
-    // Tags Array
 
     const [selectedImage, setSelectedImage] = useState(null);
     const [imageUrl, setImageUrl] = useState(null);
@@ -44,9 +40,15 @@ const CreateArticle = () => {
     }, [selectedTags]);
 
     const onTagClick = (tagName) => {
-        let updatedSelectedTags;
+
+        let updatedSelectedTags = selectedTags;
+        
         if (!selectedTags.includes(tagName)) {
-            updatedSelectedTags = [...selectedTags, tagName];
+            if (selectedTags.length < 3) {
+                updatedSelectedTags = [...selectedTags, tagName];
+            } else {
+                setErrorMessages({ ...errorMessages, tagsError: "Tag limit is 3!" });
+            }
 
         } else {
             updatedSelectedTags = selectedTags.filter((item) => item != tagName);
@@ -73,8 +75,39 @@ const CreateArticle = () => {
     const onArticleSubmit = (e) => {
         e.preventDefault();
 
+        const newErrorMessages = {}
+
         if (!data.title) {
-            setErrorMessages({ ...errorMessages, titleError: "Fill the title input!" })
+            newErrorMessages.titleError = "Fill the title input!";
+        } else {
+            newErrorMessages.titleError = null;
+        }
+
+        if (!data.author) {
+            newErrorMessages.authorError = "Fill the author input!";
+        } else {
+            newErrorMessages.authorError = null;
+        }
+
+        if (!data.imageUrl) {
+            newErrorMessages.imageError = "Select image please";
+        } else {
+            newErrorMessages.imageError = null;
+        }
+
+        if (!data.articleText) {
+            newErrorMessages.articleTextError = "Fill the articleText input!";
+        } else if (data.articleText.length <= 300) {
+            newErrorMessages.articleTextError = "Article must have at least 300 characters!";
+        } else {
+            newErrorMessages.articleTextError = null;
+        }
+
+
+        if (Object.keys(newErrorMessages).length > 0) {
+            setErrorMessages({ ...errorMessages, ...newErrorMessages })
+        } else {
+            console.log();
         }
     }
 
@@ -88,27 +121,27 @@ const CreateArticle = () => {
                             <label>Title</label>
                             <label className="form-input-error-msg">{errorMessages.titleError}</label>
                         </div>
-                        <input className="form-input" type="text" onChange={(e) => { setData({ ...data, title: e.target.value }) }} />
+                        <input className={`form-input ${errorMessages.titleError ? "error-input" : null}`} type="text" onChange={(e) => { setData({ ...data, title: e.target.value }) }} />
                     </div>
                     <div className="form_input-group">
                         <div className="form_labels-group">
                             <label>Image</label>
                             <label className="form-input-error-msg">{errorMessages.imageError}</label>
                         </div>
-                        <div className="form-input-image-preview">
+                        <div className={`form-input-image-preview ${errorMessages.imageError ? "error-input-image" : null}`}>
                             {imageUrl ?
                                 <img src={imageUrl} className="cover-image-preview" />
                                 :
-                                <img src={media_image} />}
+                                <img src={errorMessages.imageError ? alert : media_image} />}
                         </div>
-                        <input  className=" form-input-image" type="file" accept="image/*"  onChange={handleImageChange} />
+                        <input className="form-input-image" type="file" accept="image/*" onChange={handleImageChange} />
                     </div>
                     <div className="form_input-group">
                         <div className="form_labels-group">
                             <label>Author</label>
                             <label className="form-input-error-msg">{errorMessages.authorError}</label>
                         </div>
-                        <input  className="form-input" type="text" onChange={(e) => { setData({ ...data, author: e.target.value }) }} />
+                        <input className={`form-input ${errorMessages.authorError ? "error-input" : null}`} type="text" onChange={(e) => { setData({ ...data, author: e.target.value }) }} />
                     </div>
                     <div className="form_input-group">
                         <div className="form_labels-group">
@@ -130,7 +163,7 @@ const CreateArticle = () => {
                             <label>Article text</label>
                             <label className="form-input-error-msg">{errorMessages.articleTextError}</label>
                         </div>
-                        <textarea  className="form-input" onChange={(e) => { setData({ ...data, articleText: e.target.value }) }}></textarea>
+                        <textarea className={`form-input ${errorMessages.articleTextError ? "error-input" : null}`} onChange={(e) => { setData({ ...data, articleText: e.target.value }) }}></textarea>
                     </div>
                     <div>
                         <button className="form-input-submit">Publish</button>
