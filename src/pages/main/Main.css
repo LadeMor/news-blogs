@@ -62,10 +62,16 @@ h1, h2, p{
     transform: scale(1.2);
 }
 
-.articles-list-image-label{
+.articles-tag-list{
     position: absolute;
     top: 20px;
     right: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.articles-list-image-label{
+    
 }
 
 .article-list-card{

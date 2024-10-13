@@ -16,30 +16,38 @@ form{
     gap: 15px;
 }
 
-.form-input{
+.form_input-group{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.form-input label{
+.form_input-group label{
     font-size: 18px;
     font-family: "Lora", sans-serif;
     color:var(--title-text-color);
     font-weight: bold;
 }
 
-.form-input input{
+
+
+.form-input:not([type="file"]){
     font-size: 18px;
     padding: 15px 5px 0px 5px;
     font-family: "Lora", sans-serif;
     color: black;
     border: none;
-    /* border: 1px solid var(--title-text-color) ; */
+   
     border-bottom: 2px solid var(--title-text-color);
     background-color: rgba(0, 0, 0, 0.05);
-
 }
+
+.error-input:not([type="file"]){
+    border-bottom: 2px solid red;
+    color: red ;
+    background-color: rgba(255, 0, 0, 0.1) ;
+}
+
 
 .form-input-tag-list{
     display: flex;
@@ -66,7 +74,7 @@ form{
     /* box-shadow: 0px 0px 3px black; */
 }
 
-.form-input textarea{
+.form_input-group textarea{
     resize: none;
     font-size: 18px;
     padding: 10px;
@@ -91,4 +99,37 @@ form{
 .form-input-submit:hover{
     background-color: var(--primary-bg-color);
     color: white;
+}
+
+.form_labels-group{
+    display: flex;
+    gap: 10px;
+}
+
+.form_labels-group .form-input-error-msg{
+    color: lightcoral;
+
+}
+
+.form-input-image-preview{
+    background-color: rgba(0, 0, 0, 0.05);
+    display: inline;
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input-image-preview img:not(.cover-image-preview){
+    width: 100px;
+
+}
+
+.cover-image-preview{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
 }
