@@ -19,6 +19,8 @@ const CreateArticle = () => {
         "ADVENTURE", "NATURE", "SPORT", "TRAVEL", "FASHON", "TECHNOLOGY", "ART", "BEAUTY", "BEACHES", "SUMMER", "WELLNESS", "PHOTOGRAPHY"
     ], [])
 
+    const [shakeTag, setShakeTag] = useState("");
+
     const [data, setData] = useState({
         title: null,
         imageUrl: null,
@@ -42,16 +44,20 @@ const CreateArticle = () => {
     const onTagClick = (tagName) => {
 
         let updatedSelectedTags = selectedTags;
-        
+
         if (!selectedTags.includes(tagName)) {
             if (selectedTags.length < 3) {
                 updatedSelectedTags = [...selectedTags, tagName];
             } else {
                 setErrorMessages({ ...errorMessages, tagsError: "Tag limit is 3!" });
+                setShakeTag(tagName);
+                setTimeout(() => {
+                    setShakeTag("");
+                }, 200)
             }
 
         } else {
-            updatedSelectedTags = selectedTags.filter((item) => item != tagName);
+            updatedSelectedTags = selectedTags.filter((item) => item !== tagName);
 
         }
         setSelectedTags(updatedSelectedTags);
@@ -130,9 +136,9 @@ const CreateArticle = () => {
                         </div>
                         <div className={`form-input-image-preview ${errorMessages.imageError ? "error-input-image" : null}`}>
                             {imageUrl ?
-                                <img src={imageUrl} className="cover-image-preview" />
+                                <img src={imageUrl} alt="User picked media" className="cover-image-preview" />
                                 :
-                                <img src={errorMessages.imageError ? alert : media_image} />}
+                                <img src={errorMessages.imageError ? alert : media_image} alt="Media icon" />}
                         </div>
                         <input className="form-input-image" type="file" accept="image/*" onChange={handleImageChange} />
                     </div>
@@ -151,7 +157,9 @@ const CreateArticle = () => {
                         <div className="form-input-tag-list">
                             {tagList.map((item, index) => (
                                 <div
-                                    className={`tag ${selectedTags.includes(item) ? "selected-tag" : ""}`}
+                                    className={`tag 
+                                        ${selectedTags.includes(item) ? "selected-tag" : null} 
+                                        ${shakeTag === item ? "refuse-tag-anim" : null}`}
                                     key={index}
                                     onClick={() => onTagClick(item)}
                                 >{item}</div>
