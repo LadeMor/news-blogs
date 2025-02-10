@@ -1,10 +1,12 @@
 import "./Header.css";
 
-import facebook from "../../assets/icons/facebook.png";
-import twitter from "../../assets/icons/twitter.png";
-import youtube from "../../assets/icons/youtube.png";
-import pinterest from "../../assets/icons/pinterest.png";
-import behance from "../../assets/icons/behance.png";
+import facebook from "../../assets/icons/social/facebook.png";
+import twitter from "../../assets/icons/social/twitter.png";
+import youtube from "../../assets/icons/social/youtube.png";
+import pinterest from "../../assets/icons/social/pinterest.png";
+import behance from "../../assets/icons/social/behance.png";
+
+import burger from "../../assets/icons/burger-menu-svgrepo-com.svg";
 
 import search from "../../assets/icons/Search Icon.png"
 import Container from "../container/Container";
@@ -24,15 +26,7 @@ const Header = () => {
                             <a href="#">Articles</a>
                         </div>
                         <span className="vertical-line"></span>
-                        <div className="header-links-icons">
-                            <img src={facebook} alt="Facebook logo"/>
-                            <img src={twitter} alt="Twitter logo"/>
-                            <img src={youtube} alt="Youtube logo"/>
-                            <img src={pinterest} alt="Pinterest logo"/>
-                            <img src={behance} alt="Behance logo"/>
-                        </div>
-                        <span className="vertical-line"></span>
-                        <img src={search} alt="Search"/>
+                        <img src={burger} alt="Burger icon" class="burger-icon"/>
                     </nav>
                 </header>
                 <section id="blog-slider">
@@ -47,7 +41,9 @@ const Header = () => {
                                 <span className="blog-slider-horizontal-line"></span>
                             </div>
                             <p className="blog-slider-description-text">
-                                Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.
+                                Progressively incentivize cooperative systems through 
+                                -technically sound functionalities. 
+                                The credibly productivate seamless data.
                             </p>
                         </div>
                         <div className="dots">

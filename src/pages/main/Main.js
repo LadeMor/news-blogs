@@ -12,7 +12,7 @@ import blog7 from "../../assets/images/blog/blog7.png";
 import blog8 from "../../assets/images/blog/blog8.png";
 
 import blog_image1 from "../../assets/images/blog-metro/Blog_Image.png";
-import { NavLink } from "react-router-dom";
+import { ArticleList } from "../../components/article/article-list/ArticleList";
 
 const Main = () => {
 
@@ -120,32 +120,7 @@ const Main = () => {
                             <button className="filter-btn">View All</button>
                         </div>
                     </div>
-                    <div className="articles-list">
-                        {articlesList.map((item, index) => (
-                           <NavLink to="/article-item" style={{textDecoration:"none"}}>
-                                <div className="article-list-card" >
-                                    <div className="articles-list-image">
-                                        <img src={item.coverImageUrl} />
-                                        <div className="articles-tag-list">
-                                         {item.tags.map((label) => (
-                                            <div className="tag-label articles-list-image-label">
-                                              {label}
-                                            </div>
-                                         ))}
-                                         
-                                        </div>
-                                    </div>
-                                    <div className="articles-list-text">
-                                        <p className="articles-list-text-date">{item.date}</p>
-                                        <h2 className="articles-list-text-title">{item.title}</h2>
-                                        <p className="articles-list-text-description">
-                                          {item.description}
-                                        </p>
-                                    </div>
-                                </div>
-                           </NavLink>
-                        ))}
-                    </div>
+                    <ArticleList articlesList={articlesList}/>
                 </section>
             </Container>
             <Container width={1440}>

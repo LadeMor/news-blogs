@@ -2,11 +2,11 @@ import Container from "../container/Container";
 
 import "./Footer.css";
 
-import facebook from "../../assets/icons/facebook.png";
-import twitter from "../../assets/icons/twitter.png";
-import youtube from "../../assets/icons/youtube.png";
-import pinterest from "../../assets/icons/pinterest.png";
-import behance from "../../assets/icons/behance.png";
+import facebook from "../../assets/icons/social/facebook.png";
+import twitter from "../../assets/icons/social/twitter.png";
+import youtube from "../../assets/icons/social/youtube.png";
+import pinterest from "../../assets/icons/social/pinterest.png";
+import behance from "../../assets/icons/social/behance.png";
 
 
 const Footer = () => {

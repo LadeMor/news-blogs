@@ -8,7 +8,7 @@ footer{
     background-color: var(--primary-bg-color);
     display: flex;
     flex-direction: row;
-   
+    flex-wrap: wrap;
     align-self: center;
     gap: 142px;
 }

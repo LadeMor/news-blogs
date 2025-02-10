@@ -6,13 +6,9 @@ import Header from "./components/header/Header";
 import Main from "./pages/main/Main";
 import AboutUs from './pages/about-us/AboutUs';
 import CreateArticle from './pages/create-article/CreateArticle';
-import ArticleItem from './pages/article-item/ArticleItem';
-import { useState } from 'react';
+import ArticlePage from './pages/article-page/ArticlePage';
 
 function App() {
-
- 
-
   return (
     <Router>
       <Header/>
@@ -20,7 +16,7 @@ function App() {
         <Route path="/" element={<Main/>}/>
         <Route path="/about" element={<AboutUs/>}/>
         <Route path="/create" element={<CreateArticle/>}/>
-        <Route path="/article-item" element={<ArticleItem/>}/>
+        <Route path="/article-page" element={<ArticlePage/>}/>
       </Routes>
       <Footer/>
     </Router>

@@ -32,12 +32,12 @@ nav{
 .vertical-line{
     height: 20px;
     width: 1px;
-    background-color: white;
+    background-color: #E5E5E5;
 }
 
 .header-links{
     display: flex;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -45,13 +45,15 @@ nav{
     text-decoration: none;
     color:var(--secondary-text-color);
     font-family: "Roboto", sans-serif;
-    font-size: 12px;
-    padding-bottom: 6px;
+    font-size: 14px;
+    padding: 4px;
+    border-radius: 5px;
 }
 
 .active-link{
     color: white;
-    border-bottom: 2px solid var(--focus-color);
+    background-color:var(--focus-color);
+    /* border-bottom: 2px solid var(--focus-color); */
 }
 
 .header-links-icons{
@@ -60,7 +62,11 @@ nav{
     align-items: center;
 }
 
-
+.burger-icon{
+    width: 30px;
+    display: none;
+    cursor: pointer;
+}
 
 #blog-slider{
     background-image: url("../../assets/images/Image.png");
@@ -80,7 +86,7 @@ nav{
     font-family: "Lora", sans-serif;
     font-weight: bold;
     color:white;
-    width: 530px;
+    max-width: 530px;
     margin-top: 15px;
     margin-bottom: 13px;
 }
@@ -91,9 +97,10 @@ nav{
     gap: 10px;
 }
 
-
 .blog-slider-description-text{
-    width: 420px;
+    max-width: 520px;
+    width: 100%;
+    line-break: anywhere;
     color: var(--secondary-text-color);
     font-size: 12px;
     font-family: "Lora", sans-serif;
@@ -132,4 +139,18 @@ nav{
 
 .active-dot{
     background-color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 550px) {
+    .header-links{
+        display: none;
+    }
+
+    .vertical-line{
+        display: none;
+    }
+
+    .burger-icon{
+        display:block;
+    }
 }
