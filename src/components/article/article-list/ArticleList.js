@@ -2,6 +2,8 @@ import React from "react";
 
 import { NavLink } from "react-router-dom";
 
+import "./ArticleList.css";
+
 export const ArticleList = ({articlesList}) => {
     return (
         <div className="articles-list">

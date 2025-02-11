@@ -13,6 +13,7 @@ import blog8 from "../../assets/images/blog/blog8.png";
 
 import blog_image1 from "../../assets/images/blog-metro/Blog_Image.png";
 import { ArticleList } from "../../components/article/article-list/ArticleList";
+import { ArticleFilter } from "../../components/article/article-filter/ArticleFilter";
 
 const Main = () => {
 
@@ -106,20 +107,7 @@ const Main = () => {
         <>
             <Container width={1300}>
                 <section id="articles">
-                    <div className="articles-header">
-                        <h1 className="articles-header-title">Popular topics</h1>
-                        <div className="articles-filter">
-                            <div className="articles-filter-list">
-                                <button style={{ color: "var(--focus-color)" }}>All</button>
-                                <button>Adventure</button>
-                                <button>Travel</button>
-                                <button>Fashon</button>
-                                <button>Technology</button>
-                                <button>Branding</button>
-                            </div>
-                            <button className="filter-btn">View All</button>
-                        </div>
-                    </div>
+                    <ArticleFilter/>
                     <ArticleList articlesList={articlesList}/>
                 </section>
             </Container>

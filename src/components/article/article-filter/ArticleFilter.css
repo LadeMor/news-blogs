@@ -1,0 +1,110 @@
+.articles-header{
+    position: relative;
+    z-index: 1;
+}
+
+.articles-filter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.articles-filter-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.articles-filter-list button, .filter-btn{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-family: "Lora", sans-serif;
+    color:var(--title-text-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filter-selector{
+    position: relative;
+}
+
+.filter-selector button{
+    font-size: 14px;
+    font-family: "Lora", sans-serif;
+    color:var(--title-text-color);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    border:2px solid var(--title-text-color);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 110px;
+}
+
+.filter-selector img{
+    transform: translateY(1px);
+}
+
+.dropdown-options{
+    position: absolute;
+    background-color:white;
+    border-radius: 5px;
+    border:2px solid var(--title-text-color);
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Lora", sans-serif;
+    padding:0;
+    min-width: 100px;
+    overflow: scroll;
+    max-height: 0px;
+    margin-top: 0;
+}
+
+.dropdown-options li{
+    list-style: none;
+    padding: 4px;
+    color:var(--title-text-color);
+    border-bottom: 1px solid var(--title-text-color);
+    cursor: pointer;
+    transition: .2s;
+   
+}
+
+.dropdown-options li:hover{
+    background-color: lightgray;
+}
+
+.dropdown-options li:last-child{
+    border-bottom: none;
+}
+
+.dropdown-animation-open{
+    animation: dropDownOpen 0.5s ease-in-out 0s 1 normal forwards;
+}
+
+.dropdown-animation-hide{
+    animation: dropDownHide 0.3s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes dropDownOpen {
+    0%{
+        max-height: 0px;
+    }
+
+    100%{
+        max-height: 200px;
+    }
+}
+
+@keyframes dropDownHide {
+    0%{
+        max-height: 200px;
+    }
+
+    100%{
+        max-height: 0px;
+        display: none;
+    }
+}
