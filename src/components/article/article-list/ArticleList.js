@@ -9,6 +9,11 @@ export const ArticleList = ({articlesList}) => {
             {articlesList.map((item, index) => (
                 <ArticleItem item={item}/>
             ))}
+            <div className="paggination-handle">
+                <button>Previous</button>
+                <p className="page-count">1</p>
+                <button>Next</button>
+            </div>
         </div>
     );
 }

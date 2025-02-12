@@ -88,6 +88,41 @@
     animation: dropDownHide 0.3s ease-in-out 0s 1 normal forwards;
 }
 
+.articles-filter-left-part{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.articles-filter-search-block{
+    display: flex;
+    align-items:center;
+    gap: 10px;
+}
+
+.articles-filter-search-block input{
+    font-size: 14px;
+    font-family: "Lora", sans-serif;
+    color:var(--title-text-color);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    border:2px solid var(--title-text-color);
+    border-radius: 5px;
+    padding: 4px;
+    min-width: 240px;
+}
+
+.articles-filter-search-block img{
+    width: 35px;
+    cursor: pointer;
+    background-color:lightgray;
+    border-radius:5px;
+}
+
+.articles-filter-search-block img:hover{
+    background-color:gray;
+}
+
 @keyframes dropDownOpen {
     0%{
         max-height: 0px;

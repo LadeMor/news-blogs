@@ -1,6 +1,7 @@
 import "./ArticleFilter.css";
 
 import arrow_down from "../../../assets/icons/arrow-down.svg";
+import search from "../../../assets/icons/search.svg";
 import { useState } from "react";
 
 export const ArticleFilter = () => {
@@ -34,19 +35,25 @@ export const ArticleFilter = () => {
     return (
         <div className="articles-header">
             <div className="articles-filter">
-                <div className="filter-selector">
-                    <button onClick={onDropDownClick}>
-                        {selectedTag ? selectedTag : "All"}
-                        <img src={arrow_down} alt="Arrow down" />
-                    </button>
-                    <ul className={`dropdown-options ${dropDownOpen ? "dropdown-animation-open" : "dropdown-animation-hide"}`}>
-                        {tagList.map((tag, index) => (
-                            <li 
-                            onClick={() => onDropDownOptionClick(capitalizeFirstLetter(tag))}
-                            key={index}
-                            >{capitalizeFirstLetter(tag)}</li>
-                        ))}
-                    </ul>
+                <div className="articles-filter-left-part">
+                    <div className="filter-selector">
+                        <button onClick={onDropDownClick}>
+                            {selectedTag ? selectedTag : "All"}
+                            <img src={arrow_down} alt="Arrow down" />
+                        </button>
+                        <ul className={`dropdown-options ${dropDownOpen ? "dropdown-animation-open" : "dropdown-animation-hide"}`}>
+                            {tagList.map((tag, index) => (
+                                <li 
+                                onClick={() => onDropDownOptionClick(capitalizeFirstLetter(tag))}
+                                key={index}
+                                >{capitalizeFirstLetter(tag)}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="articles-filter-search-block">
+                        <input type="text" placeholder="Search..."/>
+                        <img src={search} alt="Search" />
+                    </div>
                 </div>
                 <button 
                 onClick={() => setSelectedTag(null)}
