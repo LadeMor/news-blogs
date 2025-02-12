@@ -1,34 +1,62 @@
 import "./Header.css";
 
-import facebook from "../../assets/icons/social/facebook.png";
-import twitter from "../../assets/icons/social/twitter.png";
-import youtube from "../../assets/icons/social/youtube.png";
-import pinterest from "../../assets/icons/social/pinterest.png";
-import behance from "../../assets/icons/social/behance.png";
-
 import burger from "../../assets/icons/burger-menu-svgrepo-com.svg";
 
-import search from "../../assets/icons/Search Icon.png"
 import Container from "../container/Container";
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const Header = () => {
-    return(
+
+    const [isSideNavOpen, setIsSideNavOpen] = useState(false);
+
+    const selectActiveLink = (isActive) => {
+        return isActive ? "active-link" : "";
+    }
+
+    const onSideMenuOpen = () => {setIsSideNavOpen(true)}
+    const onSideMenuClose = () => {setIsSideNavOpen(false)}
+
+    const NavigationLink = ({link, label}) => {
+        return(
+            <NavLink to={link} className={(navData) =>
+                selectActiveLink(navData.isActive)}
+                onClick={onSideMenuClose}>{label}</NavLink>
+        );
+    }
+
+    return (
         <>
             <Container width={1440}>
                 <header>
                     <h1 className="header-title">RUNO</h1>
                     <nav>
                         <div className="header-links">
-                            <NavLink to="/" className={(navData) => navData.isActive ? "active-link" : ""}>Home</NavLink>
-                            <NavLink to="/about" className={(navData) => navData.isActive ? "active-link" : ""}>About</NavLink>
-                            <NavLink to="/create" className={(navData) => navData.isActive ? "active-link" : ""}>Create</NavLink>
-                            <a href="#">Articles</a>
+                            <NavigationLink link={"/"} label={"Home"}/>
+                            <NavigationLink link={"/about"} label={"About"}/>
+                            <NavigationLink link={"/create"} label={"Create"}/>
+                            <NavigationLink link={"/articles"} label={"Articles"}/>
                         </div>
                         <span className="vertical-line"></span>
-                        <img src={burger} alt="Burger icon" class="burger-icon"/>
+                        <img src={burger} 
+                        alt="Burger icon" 
+                        class="burger-icon"
+                        onClick={onSideMenuOpen} />
                     </nav>
                 </header>
+                <div className="side-nav-container" style={
+                        {display: isSideNavOpen ? "block" : "none"
+                    }}
+                    onClick={onSideMenuClose}>
+                    <nav className={`side-nav ${isSideNavOpen ? 
+                    "side-nav-open-animation" :
+                    "side-nav-close-animation"}`}>
+                        <NavigationLink link={"/"} label={"Home"}/>
+                        <NavigationLink link={"/about"} label={"About"}/>
+                        <NavigationLink link={"/create"} label={"Create"}/>
+                        <NavigationLink link={"/articles"} label={"Articles"}/>
+                    </nav>
+                </div>
                 <section id="blog-slider">
                     <div className="blog-slider-wrapper">
                         <p className="tag-label">
@@ -41,8 +69,8 @@ const Header = () => {
                                 <span className="blog-slider-horizontal-line"></span>
                             </div>
                             <p className="blog-slider-description-text">
-                                Progressively incentivize cooperative systems through 
-                                -technically sound functionalities. 
+                                Progressively incentivize cooperative systems through
+                                -technically sound functionalities.
                                 The credibly productivate seamless data.
                             </p>
                         </div>

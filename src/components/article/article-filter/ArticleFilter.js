@@ -33,7 +33,6 @@ export const ArticleFilter = () => {
 
     return (
         <div className="articles-header">
-            <h1 className="articles-header-title">Popular topics</h1>
             <div className="articles-filter">
                 <div className="filter-selector">
                     <button onClick={onDropDownClick}>

@@ -8,7 +8,6 @@ export const BlogMetro = () => {
 
     return (
         <section id="blog-metro">
-            <h1 className="blog-metro-title">Editor’s Pick</h1>
             <div className="blog-metro-card-list">
                 {blogMetroPlaceholder.map((item, index) => (
                     <div className="blog-metro-card" key={index}>

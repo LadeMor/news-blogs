@@ -108,6 +108,9 @@ const Main = () => {
         <>
             <Container width={1300}>
                 <section id="articles">
+                    <h1 className="articles-header-title" style={{marginBottom:"40px"}}>
+                      Popular topics
+                    </h1>
                     <ArticleFilter/>
                     <ArticleList articlesList={articlesList}/>
                 </section>
@@ -116,6 +119,7 @@ const Main = () => {
                 <BigPost/>
             </Container>
             <Container width={1300}>
+                <h1 className="blog-metro-title">Editor’s Pick</h1>
                 <BlogMetro/>
             </Container>
         </>
