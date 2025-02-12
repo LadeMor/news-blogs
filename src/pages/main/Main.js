@@ -11,14 +11,15 @@ import blog6 from "../../assets/images/blog/blog6.png";
 import blog7 from "../../assets/images/blog/blog7.png";
 import blog8 from "../../assets/images/blog/blog8.png";
 
-import blog_image1 from "../../assets/images/blog-metro/Blog_Image.png";
+
 import { ArticleList } from "../../components/article/article-list/ArticleList";
 import { ArticleFilter } from "../../components/article/article-filter/ArticleFilter";
+import { BigPost } from "../../components/big-post/BigPost";
+import { BlogMetro } from "../../components/blog-metro/BlogMetro";
 
 const Main = () => {
 
     const placeholders = Array(8).fill(null);
-    const blogMetroPlaceholder = Array(3).fill(null);
 
     const [articlesList, setArticlesList] = useState([
       {
@@ -112,40 +113,10 @@ const Main = () => {
                 </section>
             </Container>
             <Container width={1440}>
-                <section id="big-post">
-                    <div className="big-post-content">
-                        <p className="tag-label big-post-tag">FASHON</p>
-                        <h1 className="big-post-title">
-                            Richird Norton photorealistic rendering as real photos
-                        </h1>
-                        <p className="big-post-text">
-                            Progressively incentivize cooperative systems through technically sound functionalities.
-                            The credibly productivate seamless data.
-                        </p>
-                        <div className="horizontal-line"></div>
-                        <p className="big-post-date">08.08.2021</p>
-                    </div>
-                </section>
+                <BigPost/>
             </Container>
             <Container width={1300}>
-                <section id="blog-metro">
-                    <h1 className="blog-metro-title">Editor’s Pick</h1>
-                    <div className="blog-metro-card-list">
-                        {blogMetroPlaceholder.map((item, index) => (
-                            <div className="blog-metro-card" key={index}>
-                                <img src={blog_image1} />
-                                <a className="tag-label blog-metro-card-tag">FASHON</a>
-                                <div className="blog-metro-card-content">
-                                    <a className="blog-metro-card-date">08.08.2021</a>
-                                    <h2 className="blog-metro-card-title">Richird Norton photorealistic rendering as real photos</h2>
-                                    <p className="blog-metro-card-text">Progressively incentivize cooperative systems
-                                        through technically sound functionalities.
-                                        The credibly productivate seamless data.</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                <BlogMetro/>
             </Container>
         </>
     );

@@ -46,11 +46,6 @@ const Header = () => {
                                 The credibly productivate seamless data.
                             </p>
                         </div>
-                        <div className="dots">
-                            <div className="dot active-dot"></div>
-                            <div className="dot"></div>
-                            <div className="dot"></div>
-                        </div>
                     </div>
                 </section>
             </Container>
