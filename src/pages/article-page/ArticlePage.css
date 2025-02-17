@@ -15,6 +15,57 @@
     gap: 7px;
 }
 
+.article-page-menu-container{
+    position: absolute;
+    right: -50px;
+}
+
+.article-three-dots{
+    cursor: pointer;
+    transition: .3s;
+    padding: 3px;
+    border-radius:5px;
+}
+
+.article-three-dots:hover{
+    background-color:rgba(128, 128, 128, 0.5);
+}
+
+.article-page-menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border: 2px solid black;
+    padding: 3px;
+    border-radius:5px;
+    display: none;
+}
+
+.article-page-menu button{
+    font-family: "Lora", sans-serif;
+    color:black;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    border:1px solid black;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor:pointer;
+}
+
+.article-page-menu button:hover{
+    opacity: 0.5;
+}
+
+
+#delete-btn{
+    background-color:lightcoral;
+}
+
+#edit-btn{
+    background-color:lightyellow;
+}
+
 .horizontal-line-article{
     display: flex;
     width: 35px;
@@ -85,4 +136,56 @@
     display:flex ;
     align-items: center;
     gap:10px;
+}
+
+.module-window-container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: fixed;
+    top:0px;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.module-window{
+    background-color:white;
+    border:4px solid #6C757D;
+    padding: 10px;
+    border-radius:10px;
+}
+
+.module-window h2{
+    margin-bottom: 10px;
+}
+
+.module-window-buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.module-window-buttons button{
+    font-family: "Lora", sans-serif;
+    color:black;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    border:1px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor:pointer;
+    padding: 10px 30px;
+    transition: 0.3s;
+}
+
+.module-window-buttons button:hover{
+    opacity: 0.5;
+}
+
+#yes-btn{
+    background-color:lightgreen;
+}
+
+#no-btn{
+    background-color:lightcoral;
 }
